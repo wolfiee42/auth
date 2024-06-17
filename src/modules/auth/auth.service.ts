@@ -50,12 +50,14 @@ const login = async (payload: TUserLogin) => {
     const accessToken = jwt.sign(jwtPayload, config.jwt_access_secret as string, { expiresIn: config.jwt_access_expires_in });
     const refreshToken = jwt.sign(jwtPayload, config.jwt_refresh_secret as string, { expiresIn: config.jwt_refresh_expires_in });
 
-
-    return user;
-
+    return {
+        accessToken,
+        refreshToken
+    }
 }
 
 
 export const authService = {
-    register
+    register,
+    login
 }

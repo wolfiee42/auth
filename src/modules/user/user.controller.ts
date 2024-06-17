@@ -9,6 +9,7 @@ const createAdmin = catchAsync(async (req, res) => {
     message: "Admin is created successfully!",
     data: result,
   });
+
 });
 
 const updateUser = catchAsync(async (req, res) => {
@@ -20,6 +21,7 @@ const updateUser = catchAsync(async (req, res) => {
     message: "User updated successfully!",
     data: result,
   });
+
 });
 
 export const userControllers = {
